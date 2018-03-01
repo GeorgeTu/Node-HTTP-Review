@@ -21,14 +21,35 @@ const userlist = [
     },
     
 ]
-
+const createUser = (req, res, next) => {
+    console.log("created")
+    console.log(req.body)
+    userlist.push(req.body)
+    res.status(200).json(userlist);
+}
 
 const getUsers = (req, res, next) => {
-    console.log("Hi")
+   
     res.status(200).json(userlist);
   };
 
+const updateUser = (req, res, next) => {
+    console.log(req)
+    for (var i = 0; i < userlist.length; i++){
+
+    }
+    res.status(200).json(userlist);
+}
+
+const deleteUser = (req, res, next) => {
+    console.log(params)
+}
+
 
 module.exports = {
-    getUsers
+    createUser,
+    getUsers,
+    updateUser,
+    deleteUser
+
 }
