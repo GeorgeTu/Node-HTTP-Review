@@ -19,7 +19,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 
-app.use((req, res, next) => { // we can console log our req.body, params, or query here. This will help you see if the req data is making it to the server properly. Good for troubleshooting where your requests could be failing, and to see what your data looks like on the server side.
+app.use((req, res, next) => { // we can console log our req.body, params, or query here. This will help you see if the req data is making it to the server properly. Good for troubleshooting where your requests could be failing, and to see what your req data looks like on the server side.
     console.log("Middleware firing off...")
     console.log("Body: ", req.body)
     console.log("Query: ", req.query)
