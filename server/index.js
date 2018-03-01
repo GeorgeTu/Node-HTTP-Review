@@ -9,6 +9,7 @@ const app = express();
 const userCtrl = require(`${__dirname}/userCtrl.js`);
 
 //Define port to listen to
+//TELL STUDENTS ABOUT package.json proxy
 const port = 3333;
 
 
