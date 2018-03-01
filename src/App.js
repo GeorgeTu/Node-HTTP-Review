@@ -27,7 +27,7 @@ class App extends Component {
         email,
         roomNumber
       })
-      .then(response => this.setState({ user: response.data }))
+      .then(response => this.setState({ users: response.data }))
   }
 
   readUser() {
@@ -44,7 +44,7 @@ class App extends Component {
 
   deleteUser(user) {
     axios
-      .delete(`/api/deleteuser/${user}`)
+      .delete(`/api/deleteuser/?user=${user}`)
       .then(response => this.setState({ users: response.data }))
   }
 
@@ -86,10 +86,10 @@ class App extends Component {
         <div className="crudFlex">
           <div className="crudBoxes">
             Create:
-            <input placeholder="User's name" />
-            <input placeholder="User's email" />
-            <input placeholder="Room NUMBER" />
-            <button>Create User</button>
+            <input placeholder="User's name" onChange={(e) => this.createUserText(e.target.value)} />
+            <input placeholder="User's email" onChange={(e) => this.createEmailText(e.target.value)}/>
+            <input placeholder="Room NUMBER" onChange={(e) => this.createRoomNumberText(e.target.value)} />
+            <button onClick = {() =>this.createUser(this.state.createusertext, this.state.createemailtext, this.state.createroomtext)}>Create User</button>
           </div>
 
           <div className="crudBoxes">
@@ -102,11 +102,11 @@ class App extends Component {
             Update:
             <input
               placeholder="User's name"
-              onChange={e => this.updateroomnametext(e.target.value)}
+              onChange={e => this.updateUserNameText(e.target.value)}
             />
             <input
               placeholder="New Room Number"
-              onChange={e => this.updateroomnumbertext(e.target.value)}
+              onChange={e => this.updateRoomNumberText(e.target.value)}
             />
             <button
               onClick={() =>

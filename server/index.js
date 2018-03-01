@@ -12,8 +12,7 @@ app.use(bodyParser.json());
 
 
 app.use((req, res, next) => {
-  console.log("HIT ON EACH REQUEST");
-  console.log("REQ.BODY: ", req.body);
+    console.log("Middleware firing off...")
   next();
 });
 
