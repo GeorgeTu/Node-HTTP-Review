@@ -4,5 +4,5 @@ The front end is just an App that tracks users, their emails, and their room num
 
 ## Image of front end:
 
-<img src=""/>
+<img src="https://github.com/chriswfoster/Node-HTTP-Review/blob/master/public/screenshot.png"/>
 
