@@ -5,11 +5,12 @@ const cors = require("cors");
 //assign express to our app variable
 const app = express();
 
-// import controller that holds userdata and methods
+// import controller that holds userdata and methods. Use 2 undercores for dirname :)
 const userCtrl = require(`${__dirname}/userCtrl.js`);
 
-//Define port to listen to
-//TELL STUDENTS ABOUT package.json proxy
+// Define port to listen to
+// Look at proxy in package.json. Proxy simply points front end to your back end.
+// This is so you don't have to type 'http://localhost:3000/API/METHOD for every single request
 const port = 3333;
 
 
