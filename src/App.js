@@ -86,10 +86,29 @@ class App extends Component {
         <div className="crudFlex">
           <div className="crudBoxes">
             Create:
-            <input placeholder="User's name" onChange={(e) => this.createUserText(e.target.value)} />
-            <input placeholder="User's email" onChange={(e) => this.createEmailText(e.target.value)}/>
-            <input placeholder="Room NUMBER" onChange={(e) => this.createRoomNumberText(e.target.value)} />
-            <button onClick = {() =>this.createUser(this.state.createusertext, this.state.createemailtext, this.state.createroomtext)}>Create User</button>
+            <input
+              placeholder="User's name"
+              onChange={e => this.createUserText(e.target.value)}
+            />
+            <input
+              placeholder="User's email"
+              onChange={e => this.createEmailText(e.target.value)}
+            />
+            <input
+              placeholder="Room NUMBER"
+              onChange={e => this.createRoomNumberText(e.target.value)}
+            />
+            <button
+              onClick={() =>
+                this.createUser(
+                  this.state.createusertext,
+                  this.state.createemailtext,
+                  this.state.createroomtext
+                )
+              }
+            >
+              Create User
+            </button>
           </div>
 
           <div className="crudBoxes">

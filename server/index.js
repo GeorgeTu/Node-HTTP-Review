@@ -18,6 +18,8 @@ app.use(bodyParser.json());
 
 app.use((req, res, next) => {
     console.log("Middleware firing off...")
+    console.log("Body: ", req.body)
+    console.log("Query: ", req.query)
   next();
 });
 
