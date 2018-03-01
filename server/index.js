@@ -28,7 +28,7 @@ app.use((req, res, next) => { // we can console log our req.body, params, or que
 });
 
 
-//define methods, paths, and handlers.
+//define methods, paths, and handlers (example: app.get, /api/getusers, and getUsers function).
 app.get("/api/getusers", userCtrl.getUsers)
 app.post("/api/createUser", userCtrl.createUser)
 app.put("/api/updateuser", userCtrl.updateUser)
@@ -36,5 +36,5 @@ app.delete("/api/deleteuser", userCtrl.deleteUser)
 
 
 
-
+// app.listen has Express return an http.Server instance, instead of you having to define and create one. We can console.log a string and the value of port to your server's console.
 app.listen(port, () => {console.log(`Listening on ${port}`)})
