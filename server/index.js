@@ -10,12 +10,12 @@ const port = 3333;
 app.use(cors());
 app.use(bodyParser.json());
 
+
 app.use((req, res, next) => {
   console.log("HIT ON EACH REQUEST");
   console.log("REQ.BODY: ", req.body);
   next();
 });
-
 
 
 
